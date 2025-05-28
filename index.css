@@ -1,0 +1,63 @@
+body {
+    margin: 0; 
+    font-family: "Inter", sans-serif;
+}
+
+/*the header nav and footer */
+header {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.logo {
+    width: 50%; 
+    height: 50%; 
+}
+
+nav {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    gap: 30px; 
+}
+
+header nav {
+    padding-right: 20px; 
+}
+
+header a {
+    font-size: 1.5em; 
+    text-decoration: none; 
+    color: black; 
+    font-weight: 400; 
+    position: relative; 
+}
+
+header .btn-nav::before { /*ajout d'un style sur un element qui ne salit pas le html*/
+    content: ''; 
+    position: absolute; 
+    bottom: -5px; 
+    left: 0; 
+    width: 0%; 
+    height: 3px; 
+    background-color: black; 
+    transition: all .5s; 
+}
+
+header .btn-nav:hover::before {
+    width: 100%; 
+}
+
+.logo-nav {
+    width: 32px; 
+    height: 32px;
+    transition: transform 0.3s ease; ;
+}
+
+.logo-nav:hover {
+    transform: scale(1.2);
+}
+
+
