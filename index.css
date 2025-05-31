@@ -1,5 +1,6 @@
 body {
-    margin: 0; 
+    margin: 0;
+    padding: 0;  
     font-family: "Inter", sans-serif;
 }
 
@@ -13,6 +14,67 @@ header {
     z-index: 1000; 
     position: fixed;
     top: 0; 
+    transition: background-color 0.7s ease, box-shadow 0.7s ease, opacity 0.7s ease; 
+}
+
+/*le menu déroulant*/
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    float: left; 
+    width: 25%; 
+    text-align: center; 
+}
+
+nav ul::after {
+    content: ""; 
+    display: table;
+    clear: both; 
+}
+
+.sous-menu li {
+    float: none; 
+    width: 100%; 
+    text-align: left;
+}
+
+.sous-menu a {
+    padding: 10px; 
+    border-bottom: none;
+}
+
+.deroulant > a::after {
+    content: "▼"; 
+    font-size: 12px; 
+}
+
+.sous-menu {
+    display: none; 
+    box-shadow: 0px 1px 2px #CCC; 
+    background-color: white; 
+    position: absolute; 
+    width: 100%; 
+    z-index: 1000; 
+}
+
+nav ul li {
+    float: left; 
+    width: 25%; 
+    text-align: center; 
+    position: relative; 
+}
+
+/*pour l'animation en js*/
+header.scrolled {
+    background-color: #FFFF; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+}
+
+header.scrolled a {
+    color: black; 
 }
 
 .logo {
@@ -48,6 +110,22 @@ header .btn-nav::before { /*ajout d'un style sur un element qui ne salit pas le 
     height: 3px; 
     background-color: white; 
     transition: all .5s; 
+}
+
+/*pour le cas ou c'est scroller*/
+header.scrolled .btn-nav::before {
+    content: ''; 
+    position: absolute; 
+    bottom: -5px; 
+    left: 0; 
+    width: 0%; 
+    height: 3px; 
+    background-color: black; 
+    transition: all .5s; 
+}
+
+header.scrolled .btn-nav:hover::before {
+    width: 100%; 
 }
 
 header .btn-nav:hover::before {
@@ -113,6 +191,28 @@ header .btn-nav:hover::before {
 .texte-milieu {
     text-align: center;
     color: white; 
+}
+
+.nav-dans-la-page:hover {
+    color: black; 
+}
+
+footer {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;  
+    padding: 50px; 
+}
+
+.logo-footer {
+    color: black; 
+    transition: transform 0.3s ease; ;
+}
+
+.logo-footer:hover {
+    transform: scale(1.2);
 }
 
 
