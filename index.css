@@ -9,6 +9,10 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center; 
+    width: 100%;
+    z-index: 1000; 
+    position: fixed;
+    top: 0; 
 }
 
 .logo {
@@ -28,9 +32,9 @@ header nav {
 }
 
 header a {
-    font-size: 1.5em; 
+    font-size: 1.1em; 
     text-decoration: none; 
-    color: black; 
+    color: white; 
     font-weight: 400; 
     position: relative; 
 }
@@ -42,7 +46,7 @@ header .btn-nav::before { /*ajout d'un style sur un element qui ne salit pas le 
     left: 0; 
     width: 0%; 
     height: 3px; 
-    background-color: black; 
+    background-color: white; 
     transition: all .5s; 
 }
 
@@ -53,11 +57,62 @@ header .btn-nav:hover::before {
 .logo-nav {
     width: 32px; 
     height: 32px;
+    color: white; 
     transition: transform 0.3s ease; ;
 }
 
 .logo-nav:hover {
     transform: scale(1.2);
+}
+
+.hero-section {
+    background-image: url("Photos/soleil2.jpg");
+    min-height: 80vh;
+    padding: 50px 20px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    background-size: cover; 
+    background-position: center;
+}
+
+.sous-section {
+    min-height: 100vh;
+    padding: 50px 20px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    background-size: cover; 
+    background-position: center;
+    background-color: black;
+}
+
+.sous-section p {
+    color: white; 
+}
+
+.sous-section a {
+    text-decoration: none;
+    color: white; 
+    font-size: 4em; 
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 60vh; 
+    }
+}
+
+.presentation-texte {
+    /*centrer le texte de la hero section*/
+    text-align: center;
+    color: white; 
+    font-weight: 300;
+}
+
+.texte-milieu {
+    text-align: center;
+    color: white; 
 }
 
 
