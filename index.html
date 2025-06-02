@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CLARTÉOBSCURE</title>
         <link rel="stylesheet" href="index.css">
-        <script src="script.js"></script>
 
         <!--Les polices-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,39 +18,45 @@
     <body>
         <section class="hero-section">
             <header>
-                <a href="index.html" aria-current="Accueil-logo">
-                    <img src="image/deja-vu-logo.png" alt="logo" class="logo"/>
-                </a>
-    
-                <nav>
-                    <ul>
-                        <li></li>
-                    </ul>
-                    <a href="" class="btn-nav" aria-current="Accueil">
-                        Accueil
+                <nav class="navbar">
+                    <a href="index.html" aria-current="Accueil-logo">
+                        <img src="image/deja-vu-logo.png" alt="logo" class="logo"/>
                     </a>
-                    <li class="deroulant">
-                        <a href="#" class="btn-nav" aria-label="Classement des travaux">
-                            Galerie &ensp;
-                        </a>
-                        <ul class="sous-menu">
+                    <div class="nav-links">
+                        <ul>
+                            <li class="active">
+                                <a href="" class="btn-nav" aria-current="Accueil">
+                                    Accueil
+                                </a>
+                            </li>
+                            
                             <li>
-                                <a href="#">Crépuscules</a>
+                                <a href="#" class="btn-nav" aria-label="Classement des travaux">
+                                    Galerie &ensp;
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="" class="btn-nav" aria-label="En apprendre sur nous">
+                                    À propos
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="" class="btn-nav" aria-label="Prendre contact">
+                                    Contact
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.instagram.com/youcanseeifyouwant/" target="_blank" class="logo-nav" aria-label="Nous suivre sur Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
                             </li>
                         </ul>
-                    </li>
-    
-                    <a href="" class="btn-nav" aria-label="En apprendre sur nous">
-                        À propos
-                    </a>
-    
-                    <a href="" class="btn-nav" aria-label="Prendre contact">
-                        Contact
-                    </a>
-    
-                    <a href="https://www.instagram.com/youcanseeifyouwant/" target="_blank" class="logo-nav" aria-label="Nous suivre sur Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+                    </div>
+                
+                    <i class="fa-solid fa-bars menu-hamburger"></i>
                 </nav>
             </header>
 
@@ -94,5 +99,6 @@
                 <i class="fa-brands fa-instagram"></i>
             </a>
         </footer>
+        <script src="script.js"></script>
     </body>
 </html>
