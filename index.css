@@ -103,17 +103,27 @@ header {
     }
 }
 
-/*
-.logo-nav {
-    width: 32px; 
-    height: 32px;
+.texte-milieu {
+    text-align: center;
     color: white; 
-    transition: transform 0.3s ease; ;
 }
 
-.logo-nav:hover {
-    transform: scale(1.2);
+.presentation-texte {
+    position: absolute; 
+    left: 50%; 
+    right: 50%; 
+    top: 50%; 
+    text-align: center;
+    color: white; 
+    font-weight: 300;
 }
+
+.texte-milieu {
+    text-align: center;
+    color: white; 
+}
+
+/*
 
 .hero-section {
     background-image: url("Photos/soleil2.jpg");
@@ -145,24 +155,6 @@ header {
     text-decoration: none;
     color: white; 
     font-size: 4em; 
-}
-
-@media (max-width: 768px) {
-    .hero-section {
-        height: 60vh; 
-    }
-}
-
-.presentation-texte {
-    /*centrer le texte de la hero section
-    text-align: center;
-    color: white; 
-    font-weight: 300;
-}
-
-.texte-milieu {
-    text-align: center;
-    color: white; 
 }
 
 .nav-dans-la-page:hover {
